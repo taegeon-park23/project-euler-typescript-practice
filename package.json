@@ -1,0 +1,28 @@
+{
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^5.26.0",
+    "@typescript-eslint/parser": "^5.26.0",
+    "eslint": "^8.16.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.6.2",
+    "ts-loader": "^9.3.0",
+    "ts-node": "^10.8.0",
+    "typescript": "^4.6.4"
+  },
+  "name": "project-euler-typescript-practice",
+  "version": "1.0.0",
+  "description": "Solving problems served by 'ProjectEuler'",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "node": "ts-node $param",
+    "lint": "eslint ./src/**/ --ext .ts,.tsx,.js,.jsx",
+    "lint:fix": "eslint ./src/** --fix"
+  },
+  "keywords": [
+    "algorithm"
+  ],
+  "author": "taegeon-park23",
+  "license": "ISC"
+}
