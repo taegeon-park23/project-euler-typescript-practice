@@ -5,6 +5,8 @@
     "eslint": "^8.16.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^8.0.1",
+    "lint-staged": "^12.4.1",
     "prettier": "^2.6.2",
     "ts-loader": "^9.3.0",
     "ts-node": "^10.8.0",
@@ -18,11 +20,20 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "node": "ts-node $param",
     "lint": "eslint ./src/**/ --ext .ts,.tsx,.js,.jsx",
-    "lint:fix": "eslint ./src/** --fix"
+    "lint:fix": "eslint ./src/** --fix",
+    "prettier": "prettier ./src/**/* --write"
   },
   "keywords": [
     "algorithm"
   ],
   "author": "taegeon-park23",
-  "license": "ISC"
+  "license": "ISC",
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.ts": "npm run lint"
+  }
 }
