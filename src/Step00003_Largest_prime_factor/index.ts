@@ -1,7 +1,8 @@
 // https://projecteuler.net/problem=3
-"use strict";
-function primeFactor(n: number): number[] {
+
+function primeFactor(num: number): number[] {
   const rets = [];
+  let n = num;
   // 2로 나눠지면 계속 나누기
   while (n % 2 === 0) {
     rets.push(2);

@@ -1,5 +1,5 @@
 // https://projecteuler.net/problem=4
-"use strict";
+
 function getPailndromeNumber(digit: number): number {
   const count = getMaxNumber(digit);
   let leftNumber = count;
@@ -10,10 +10,9 @@ function getPailndromeNumber(digit: number): number {
     for (let j = 0; j < count; j += 1) {
       const tempPailndromeNum = leftNumber * rightNumber;
       if (isPailndromeNumber(tempPailndromeNum)) {
-        maxPailndromeNum =
-          maxPailndromeNum < tempPailndromeNum
-            ? tempPailndromeNum
-            : maxPailndromeNum;
+        maxPailndromeNum = maxPailndromeNum < tempPailndromeNum
+          ? tempPailndromeNum
+          : maxPailndromeNum;
         break;
       }
       rightNumber -= 1;
@@ -52,7 +51,7 @@ function isPailndromeNumber(num: number): boolean {
 }
 
 function isEven(num: number): boolean {
-  return num % 2 === 0 ? true : false;
+  return num % 2 === 0;
 }
 
 function main() {

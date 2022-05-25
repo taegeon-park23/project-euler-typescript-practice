@@ -1,5 +1,4 @@
 // https://projecteuler.net/problem=1
-"use strict";
 function solving(): void {
   const ranges = getRange(1, 999);
   console.log(ranges.filter(predicate).reduce(plus));
